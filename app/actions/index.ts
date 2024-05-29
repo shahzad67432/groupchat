@@ -40,6 +40,7 @@ export const addFriend = async ({ FriendName }: Props) => {
         throw new Error('Not authenticated');
       }
       const userID = session.user.id;
+      console.log(session.user.id)
       const userId = parseInt(userID, 10);
       const user = await db.user.findUnique({
         where: { id: userId },
@@ -56,7 +57,6 @@ export const addFriend = async ({ FriendName }: Props) => {
   
       return newFriend;
     } catch (error) {
-      console.error('Error adding friend:', error);
-      throw new Error('Failed to add friend');
+      console.log('Error adding friend:', error);
     }
   };

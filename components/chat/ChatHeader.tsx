@@ -11,7 +11,7 @@ const ChatHeader: React.FC = () => {
     const session = useSession();
     const name = session.data?.user.name;
   return (
-    <div className={cn('flex items-center p-4 px-10', pathname === '/' ? "text-blue-500" : "bg-white", pathname === '/chat' && "lg:pl-[270px]" )}>
+    <div className={cn('flex items-center bg-white p-4 px-10', pathname === '/' ? "text-blue-500" : "", pathname === '/chat' && "lg:pl-[270px]" )}>
       <div className="flex-grow">
         <Link href={'/'}>
           <h1 className="text-xl font-bold pl-2 border-l-2 border-orange-600-2 p-1 text-orange-500">Group Chat</h1>

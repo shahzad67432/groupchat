@@ -39,7 +39,7 @@ const Users = () => {
 
   return (
     <>
-      <div className='pl-8'>
+      <div className='pl-8 border-blue-900 rounded-b-3xl'>
         <h1 className='flex text-start font-bold text-2xl text-white my-6' title='Find Friends'>
                 <Link href={'/users'}>
                   Users
